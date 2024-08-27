@@ -1,0 +1,18 @@
+mutation {
+  deliveryCustomizationCreate(deliveryCustomization: {
+    enabled: true,
+    functionId: "6c5c721c-2b64-4098-84c9-ca75c06bbaff", #get from Shopify Partners dashboard
+    title: "subscription rates"
+  }) {
+    deliveryCustomization {
+      id
+      enabled
+      functionId
+      title
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

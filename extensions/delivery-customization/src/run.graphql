@@ -1,0 +1,43 @@
+query RunInput {
+  cart {
+    cost {
+      subtotalAmount {
+        amount
+        currencyCode
+      }
+      totalAmount {
+        amount
+        currencyCode
+      }
+      totalTaxAmount {
+        amount
+        currencyCode
+      }
+    }
+    deliveryGroups{
+      id
+      deliveryOptions {
+        handle
+        title
+        cost {
+          amount
+        }
+      }
+      selectedDeliveryOption {
+        handle
+        title
+      }
+    }
+    lines {
+      sellingPlanAllocation {
+        sellingPlan {
+          name
+          id
+          description
+        }
+      }
+      quantity
+      id
+    }
+  }
+}
